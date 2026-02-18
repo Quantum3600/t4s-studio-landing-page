@@ -76,8 +76,8 @@ const Hero: React.FC = () => {
         />
 
         {/* Center Title */}
-        <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-['Audiowide'] text-xl md:text-3xl tracking-widest uppercase text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">
-          T4S Studio
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-['Audiowide'] text-xl md:text-3xl tracking-widest uppercase text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">
+          T4S STUDIO
         </div>
 
         <div className="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-[0.2em] text-gray-400">
@@ -270,7 +270,7 @@ const Hero: React.FC = () => {
       </div>
 
       <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/30"
+        className="absolute bottom-10 -translate-x-1/2 text-white/30"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
         style={{ opacity: useTransform(scrollY, [0, 200], [1, 0]) }}
