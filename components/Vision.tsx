@@ -36,13 +36,13 @@ const Vision: React.FC = () => {
     <section
       id="vision"
       ref={containerRef}
-      className="py-20 md:py-32 px-6 bg-[#050505] relative overflow-hidden"
+      className="py-20 md:py-32 px-6 bg-gray-50 dark:bg-[#050505] relative overflow-hidden transition-colors duration-300"
     >
       {/* Background Typography Parallax */}
       <div className="absolute top-1/2 left-0 w-full -translate-y-1/2 pointer-events-none select-none overflow-hidden">
         <motion.h2
           style={{ x: textX, opacity: 0.03 }}
-          className="text-[25vw] font-black leading-none whitespace-nowrap text-white"
+          className="text-[25vw] font-black leading-none whitespace-nowrap text-black dark:text-white transition-colors duration-300"
         >
           VISION VISION
         </motion.h2>
@@ -60,7 +60,7 @@ const Vision: React.FC = () => {
         >
           <motion.div
             whileHover={{ scale: 1.02, rotate: 1 }}
-            className="aspect-square bg-gradient-to-br from-gray-900 to-black border border-white/10 p-8 flex flex-col justify-center shadow-2xl shadow-purple-900/20 backdrop-blur-sm relative z-10"
+            className="aspect-square bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:to-black border border-black/10 dark:border-white/10 p-8 flex flex-col justify-center shadow-2xl shadow-purple-900/5 dark:shadow-purple-900/20 backdrop-blur-sm relative z-10 transition-colors duration-300"
           >
             {/* Terminal Header */}
             <div className="flex gap-2 mb-6 opacity-50">
@@ -87,14 +87,14 @@ const Vision: React.FC = () => {
                   hidden: { width: 0, opacity: 0 },
                   visible: { width: "75%", opacity: 1 },
                 }}
-                className="h-2 bg-white/10 rounded"
+                className="h-2 bg-black/10 dark:bg-white/10 rounded transition-colors duration-300"
               />
               <motion.div
                 variants={{
                   hidden: { width: 0, opacity: 0 },
                   visible: { width: "50%", opacity: 1 },
                 }}
-                className="h-2 bg-white/10 rounded"
+                className="h-2 bg-black/10 dark:bg-white/10 rounded transition-colors duration-300"
               />
               <motion.div
                 variants={{
@@ -108,7 +108,7 @@ const Vision: React.FC = () => {
                   hidden: { width: 0, opacity: 0 },
                   visible: { width: "60%", opacity: 1 },
                 }}
-                className="h-2 bg-white/10 rounded"
+                className="h-2 bg-black/10 dark:bg-white/10 rounded transition-colors duration-300"
               />
             </motion.div>
 
@@ -137,24 +137,24 @@ const Vision: React.FC = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase">
             Code as{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 bg-[length:200%_auto] animate-[gradient_3s_linear_infinite]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 dark:from-blue-400 dark:via-purple-500 dark:to-blue-400 bg-[length:200%_auto] animate-[gradient_3s_linear_infinite] transition-colors duration-300">
               Art Form
             </span>
           </h2>
-          <p className="text-gray-400 text-lg leading-relaxed mb-6">
+          <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6 transition-colors duration-300">
             We don't just write code; we architect experiences. At T4S, we
             specialize in
-            <span className="text-white font-medium"> Kotlin</span> and
-            <span className="text-white font-medium"> Jetpack Compose</span> to
+            <span className="text-black dark:text-white font-medium transition-colors duration-300"> Kotlin</span> and
+            <span className="text-black dark:text-white font-medium transition-colors duration-300"> Jetpack Compose</span> to
             build native Android applications that feel fluid, responsive, and
             alive.
           </p>
-          <p className="text-gray-400 text-lg leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed transition-colors duration-300">
             From complex backend integrations to pixel-perfect animations, our
             studio bridges the gap between rigid engineering and organic design.
           </p>
 
-          <div className="mt-12 flex space-x-8 border-t border-white/10 pt-8">
+          <div className="mt-12 flex space-x-8 border-t border-black/10 dark:border-white/10 pt-8 transition-colors duration-300">
             {[
               { val: "100%", label: "Kotlin" },
               { val: "50+", label: "Modules" },
@@ -166,7 +166,7 @@ const Vision: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 + i * 0.1, duration: 0.5 }}
-                  className="text-4xl font-bold text-white mb-2"
+                  className="text-4xl font-bold text-black dark:text-white mb-2 transition-colors duration-300"
                 >
                   {stat.val}
                 </motion.h4>
@@ -191,24 +191,24 @@ const Vision: React.FC = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase">
             Built for{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-500 to-green-400 bg-[length:200%_auto] animate-[gradient_3s_linear_infinite]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-emerald-600 to-green-600 dark:from-green-400 dark:via-emerald-500 dark:to-green-400 bg-[length:200%_auto] animate-[gradient_3s_linear_infinite] transition-colors duration-300">
               Production
             </span>
           </h2>
-          <p className="text-gray-400 text-lg leading-relaxed mb-6">
+          <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6 transition-colors duration-300">
             Stability meets speed. We harness the robust ecosystem of
-            <span className="text-white font-medium"> Spring Boot</span>{" "}
+            <span className="text-black dark:text-white font-medium transition-colors duration-300"> Spring Boot</span>{" "}
             combined with the expressive power of
-            <span className="text-white font-medium"> Kotlin</span> to architect
+            <span className="text-black dark:text-white font-medium transition-colors duration-300"> Kotlin</span> to architect
             server-side solutions that scale effortlessly.
           </p>
-          <p className="text-gray-400 text-lg leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed transition-colors duration-300">
             From microservices to monolithic masterpieces, our backend
             engineering ensures your application performs flawlessly under any
             load.
           </p>
 
-          <div className="mt-12 flex space-x-8 border-t border-white/10 pt-8">
+          <div className="mt-12 flex space-x-8 border-t border-black/10 dark:border-white/10 pt-8 transition-colors duration-300">
             {[
               { val: "99.9%", label: "Uptime" },
               { val: "<50ms", label: "Latency" },
@@ -220,7 +220,7 @@ const Vision: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 + i * 0.1, duration: 0.5 }}
-                  className="text-4xl font-bold text-white mb-2"
+                  className="text-4xl font-bold text-black dark:text-white mb-2 transition-colors duration-300"
                 >
                   {stat.val}
                 </motion.h4>
@@ -243,7 +243,7 @@ const Vision: React.FC = () => {
         >
           <motion.div
             whileHover={{ scale: 1.02, rotate: -1 }}
-            className="aspect-square bg-gradient-to-bl from-gray-900 to-black border border-white/10 p-8 flex flex-col justify-center shadow-2xl shadow-green-900/20 backdrop-blur-sm relative z-10"
+            className="aspect-square bg-white dark:bg-gradient-to-bl dark:from-gray-900 dark:to-black border border-black/10 dark:border-white/10 p-8 flex flex-col justify-center shadow-2xl shadow-green-900/5 dark:shadow-green-900/20 backdrop-blur-sm relative z-10 transition-colors duration-300"
           >
             {/* Terminal Header */}
             <div className="flex gap-2 mb-6 opacity-50">
@@ -270,16 +270,16 @@ const Vision: React.FC = () => {
                   hidden: { width: 0, opacity: 0 },
                   visible: { width: "65%", opacity: 1 },
                 }}
-                className="h-2 bg-white/10 rounded"
+                className="h-2 bg-black/10 dark:bg-white/10 rounded transition-colors duration-300"
               />
               <motion.div
                 variants={{
                   hidden: { width: 0, opacity: 0 },
                   visible: { width: "40%", opacity: 1 },
                 }}
-                className="h-2 bg-white/10 rounded"
+                className="h-2 bg-black/10 dark:bg-white/10 rounded transition-colors duration-300"
               />
-              <code className="block text-xs text-gray-500 mt-2">
+              <code className="block text-xs text-gray-500 mt-2 transition-colors duration-300">
                 // Injecting Kotlin Magic
               </code>
               <motion.div

@@ -1,104 +1,116 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>T4S Studio | Refining Reality</title>
-        <link rel="icon" href="/images/logous.ico" type="image/x-icon" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Audiowide&display=swap"
-            rel="stylesheet"
-        />
-        <style>
-            :root {
-                --cursor-size: 20px;
-            }
-            body {
-                margin: 0;
-                padding: 0;
-                background-color: #030303;
-                color: #ffffff;
-                font-family: "Rajdhani", sans-serif;
-                overflow-x: hidden;
-                cursor: none; /* Custom cursor handling */
-            }
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-                font-family: "Audiowide", sans-serif;
-            }
-            /* Custom Scrollbar */
-            ::-webkit-scrollbar {
-                width: 8px;
-            }
-            ::-webkit-scrollbar-track {
-                background: #0a0a0a;
-            }
-            ::-webkit-scrollbar-thumb {
-                background: #333;
-                border-radius: 4px;
-            }
-            ::-webkit-scrollbar-thumb:hover {
-                background: #555;
-            }
 
-            .glass-panel {
-                background: rgba(255, 255, 255, 0.03);
-                backdrop-filter: blur(10px);
-                border: 1px solid rgba(255, 255, 255, 0.05);
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T4S Studio | Refining Reality</title>
+    <link rel="icon" href="/images/logous.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Audiowide&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --cursor-size: 20px;
+        }
 
-            .text-glow-red {
-                text-shadow: 0 0 10px rgba(255, 0, 85, 0.5);
-            }
-            .text-glow-blue {
-                text-shadow: 0 0 10px rgba(0, 85, 255, 0.5);
-            }
-            .text-glow-green {
-                text-shadow: 0 0 10px rgba(0, 255, 85, 0.5);
-            }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Rajdhani", sans-serif;
+            overflow-x: hidden;
+            cursor: none;
+            /* Custom cursor handling */
+        }
 
-            /* Noise Overlay */
-            .noise-overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 100vh;
-                pointer-events: none;
-                z-index: 50;
-                opacity: 0.05;
-                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Audiowide", sans-serif;
+        }
 
-            html.lenis,
-            html.lenis body {
-                height: auto;
-            }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
 
-            .lenis.lenis-smooth {
-                scroll-behavior: auto !important;
-            }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
 
-            .lenis.lenis-smooth [data-lenis-prevent] {
-                overscroll-behavior: contain;
-            }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
 
-            .lenis.lenis-stopped {
-                overflow: hidden;
-            }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
 
-            .lenis.lenis-scrolling iframe {
-                pointer-events: none;
-            }
-        </style>
-        <script type="importmap">
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-glow-red {
+            text-shadow: 0 0 10px rgba(255, 0, 85, 0.5);
+        }
+
+        .text-glow-blue {
+            text-shadow: 0 0 10px rgba(0, 85, 255, 0.5);
+        }
+
+        .text-glow-green {
+            text-shadow: 0 0 10px rgba(0, 255, 85, 0.5);
+        }
+
+        /* Noise Overlay */
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        html.lenis,
+        html.lenis body {
+            height: auto;
+        }
+
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+
+        .lenis.lenis-scrolling iframe {
+            pointer-events: none;
+        }
+    </style>
+    <script type="importmap">
             {
                 "imports": {
                     "lucide-react": "https://esm.sh/lucide-react@^0.574.0",
@@ -111,11 +123,13 @@
                 }
             }
         </script>
-        <link rel="stylesheet" href="/index.css" />
-    </head>
-    <body>
-        <div id="root"></div>
-        <div class="noise-overlay"></div>
-        <script type="module" src="/index.tsx"></script>
-    </body>
+    <link rel="stylesheet" href="/index.css" />
+</head>
+
+<body>
+    <div id="root"></div>
+    <div class="noise-overlay"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+
 </html>

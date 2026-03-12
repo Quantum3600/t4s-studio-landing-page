@@ -8,6 +8,7 @@ import SystemCore from "./components/SystemCore";
 import Footer from "./components/Footer";
 import CustomCursor from "./components/CustomCursor";
 import GlobalParallax from "./components/GlobalParallax";
+import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
   useEffect(() => {
@@ -28,15 +29,23 @@ function App() {
 
     requestAnimationFrame(raf);
 
+    // Initial theme check to prevent flash
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+
     return () => {
       lenis.destroy();
     };
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#030303] text-white selection:bg-white selection:text-black relative">
+    <main className="min-h-screen bg-white dark:bg-[#030303] text-black dark:text-white selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black relative transition-colors duration-300">
       <CustomCursor />
       <GlobalParallax />
+      <ThemeToggle />
 
       <Hero />
       <Portfolio />
