@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303]"
+      className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-white dark:bg-[#030303] transition-colors duration-300"
     >
       {/* Header / Navigation */}
       <motion.nav
@@ -76,18 +76,18 @@ const Hero: React.FC = () => {
         />
 
         {/* Center Title */}
-        <div className="md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 font-['Audiowide'] text-xl md:text-3xl tracking-widest uppercase text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">
+        <div className="md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 font-['Audiowide'] text-xl md:text-3xl tracking-widest uppercase text-black dark:text-white drop-shadow-[0_0_10px_rgba(0,0,0,0.3)] dark:drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] transition-colors duration-300">
           T4S STUDIO
         </div>
 
-        <div className="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-[0.2em] text-gray-400">
-          <a href="#portfolio" className="hover:text-white transition-colors">
+        <div className="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400">
+          <a href="#portfolio" className="hover:text-black dark:hover:text-white transition-colors">
             Work
           </a>
-          <a href="#vision" className="hover:text-white transition-colors">
+          <a href="#vision" className="hover:text-black dark:hover:text-white transition-colors">
             Vision
           </a>
-          <a href="#team" className="hover:text-white transition-colors">
+          <a href="#team" className="hover:text-black dark:hover:text-white transition-colors">
             Team
           </a>
         </div>
@@ -117,7 +117,7 @@ const Hero: React.FC = () => {
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute bg-white rounded-full"
+            className="absolute bg-black dark:bg-white rounded-full transition-colors duration-300"
             style={{
               width: Math.random() * 2 + 1,
               height: Math.random() * 2 + 1,
@@ -156,7 +156,7 @@ const Hero: React.FC = () => {
             {points.map((pt, i) => (
               <div
                 key={i}
-                className="absolute w-1 h-1 bg-white/40 rounded-full"
+                className="absolute w-1 h-1 bg-black/40 dark:bg-white/40 rounded-full transition-colors duration-300"
                 style={{
                   transform: `translate3d(${pt.x}px, ${pt.y}px, ${pt.z}px)`,
                 }}
@@ -209,11 +209,11 @@ const Hero: React.FC = () => {
                 style={{ transform: "rotateY(-90deg) translateZ(192px)" }}
               />
               <div
-                className="absolute w-full h-full border border-white/20 bg-white/5 backdrop-blur-sm"
+                className="absolute w-full h-full border border-black/20 dark:border-white/20 bg-black/5 dark:bg-white/5 backdrop-blur-sm transition-colors duration-300"
                 style={{ transform: "rotateX(90deg) translateZ(192px)" }}
               />
               <div
-                className="absolute w-full h-full border border-white/20 bg-white/5 backdrop-blur-sm"
+                className="absolute w-full h-full border border-black/20 dark:border-white/20 bg-black/5 dark:bg-white/5 backdrop-blur-sm transition-colors duration-300"
                 style={{ transform: "rotateX(-90deg) translateZ(192px)" }}
               />
             </motion.div>
@@ -251,7 +251,7 @@ const Hero: React.FC = () => {
 
         <motion.a
           href="#portfolio"
-          className="group relative px-10 py-5 border border-white/20 overflow-hidden bg-transparent pointer-events-auto"
+          className="group relative px-10 py-5 border border-black/20 dark:border-white/20 overflow-hidden bg-transparent pointer-events-auto transition-colors duration-300"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
@@ -262,15 +262,15 @@ const Hero: React.FC = () => {
           }}
           whileTap={{ scale: 0.95 }}
         >
-          <div className="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full opacity-10"></div>
-          <span className="relative text-white font-bold tracking-[0.2em] uppercase text-sm group-hover:text-white transition-colors">
+          <div className="absolute inset-0 w-0 bg-black dark:bg-white transition-all duration-[250ms] ease-out group-hover:w-full opacity-10"></div>
+          <span className="relative text-black dark:text-white font-bold tracking-[0.2em] uppercase text-sm group-hover:text-black dark:group-hover:text-white transition-colors">
             Explore Ecosystem
           </span>
         </motion.a>
       </div>
 
       <motion.div
-        className="absolute bottom-10 -translate-x-1/2 text-white/30"
+        className="absolute bottom-10 -translate-x-1/2 text-black/30 dark:text-white/30 transition-colors duration-300"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
         style={{ opacity: useTransform(scrollY, [0, 200], [1, 0]) }}
