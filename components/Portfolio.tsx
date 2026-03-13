@@ -60,14 +60,14 @@ const Portfolio: React.FC = () => {
   return (
     <section
       id="portfolio"
-      className="py-16 md:py-24 px-6 bg-[#030303] relative z-10 overflow-hidden"
+      className="py-16 md:py-24 px-6 bg-white dark:bg-[#030303] relative z-10 overflow-hidden transition-colors duration-300"
     >
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          className="mb-16 border-l-4 border-white pl-6"
+          className="mb-16 border-l-4 border-black dark:border-white pl-6 transition-colors duration-300"
         >
           <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-2">
             Our Artifacts
@@ -150,7 +150,7 @@ const PortfolioCard: React.FC<{ project: PortfolioItem; index: number }> = ({
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="group relative h-[400px] md:h-[500px] w-full bg-[#080808] border border-white/5 overflow-hidden cursor-pointer perspective-[1000px] rounded-xl"
+      className="group relative h-[400px] md:h-[500px] w-full bg-gray-50 dark:bg-[#080808] border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer perspective-[1000px] rounded-xl transition-colors duration-300"
     >
       {/* Background Glow on Hover */}
       <div
@@ -167,10 +167,10 @@ const PortfolioCard: React.FC<{ project: PortfolioItem; index: number }> = ({
         style={{ transform: "translateZ(30px)" }}
       >
         <div className="flex justify-between items-start">
-          <span className="px-3 py-1 text-xs border border-white/20 rounded-full uppercase tracking-wider text-gray-400 bg-black/50 backdrop-blur-md">
+          <span className="px-3 py-1 text-xs border border-black/10 dark:border-white/20 rounded-full uppercase tracking-wider text-black dark:text-gray-400 bg-white/50 dark:bg-black/50 backdrop-blur-md transition-colors duration-300">
             {project.category}
           </span>
-          <ArrowUpRight className="text-white/50 group-hover:text-white transition-colors duration-300" />
+          <ArrowUpRight className="text-black/50 dark:text-white/50 group-hover:text-black dark:group-hover:text-white transition-colors duration-300" />
         </div>
 
         <div className="max-w-xs mt-auto">
@@ -180,7 +180,7 @@ const PortfolioCard: React.FC<{ project: PortfolioItem; index: number }> = ({
           >
             {project.name}
           </h3>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed transition-colors duration-300">
             {project.description}
           </p>
         </div>
@@ -188,17 +188,17 @@ const PortfolioCard: React.FC<{ project: PortfolioItem; index: number }> = ({
 
       {/* Device Mockup */}
       <motion.div
-        className="absolute bottom-[-100px] right-[-20px] w-[280px] h-[610px] bg-[#111] rounded-[3rem] border-8 border-[#222] shadow-2xl overflow-hidden z-0"
+        className="absolute bottom-[-100px] right-[-20px] w-[280px] h-[610px] bg-white dark:bg-[#111] rounded-[3rem] border-8 border-gray-200 dark:border-[#222] shadow-2xl overflow-hidden z-0 transition-colors duration-300"
         initial={{ rotate: -15, y: 100, opacity: 0.8 }}
         whileHover={{ rotate: 0, y: -80, x: -20, opacity: 1 }}
         transition={{ duration: 0.5, ease: "backOut" }}
         style={{ transform: "translateZ(10px)" }}
       >
         {/* Screen Content Placeholder */}
-        <div className="w-full h-full bg-[#050505] relative flex flex-col">
+        <div className="w-full h-full bg-gray-100 dark:bg-[#050505] relative flex flex-col transition-colors duration-300">
           {/* Top Bar */}
-          <div className="h-6 w-full bg-black flex justify-center items-center">
-            <div className="w-20 h-4 bg-[#111] rounded-b-xl"></div>
+          <div className="h-6 w-full bg-gray-200 dark:bg-black flex justify-center items-center transition-colors duration-300">
+            <div className="w-20 h-4 bg-gray-300 dark:bg-[#111] rounded-b-xl transition-colors duration-300"></div>
           </div>
 
           {/* Placeholder for Screenshot */}
@@ -219,12 +219,12 @@ const PortfolioCard: React.FC<{ project: PortfolioItem; index: number }> = ({
         </div>
 
         {/* Reflection */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/5 to-transparent pointer-events-none" />
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/5 dark:from-white/5 to-transparent pointer-events-none transition-colors duration-300" />
       </motion.div>
 
       {/* Decorative Lines */}
-      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-50" />
-      <div className="absolute top-0 right-0 w-[1px] h-full bg-gradient-to-b from-transparent via-white/20 to-transparent opacity-50" />
+      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-black/20 dark:via-white/20 to-transparent opacity-50 transition-colors duration-300" />
+      <div className="absolute top-0 right-0 w-[1px] h-full bg-gradient-to-b from-transparent via-black/20 dark:via-white/20 to-transparent opacity-50 transition-colors duration-300" />
 
       {/* Hover Line */}
       <motion.div

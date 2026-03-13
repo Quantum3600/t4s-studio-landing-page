@@ -72,18 +72,18 @@ const Team: React.FC = () => {
   return (
     <section
       id="team"
-      className="py-16 md:py-24 px-6 bg-[#030303] border-t border-white/5 overflow-hidden"
+      className="py-16 md:py-24 px-6 bg-white dark:bg-[#030303] border-t border-black/5 dark:border-white/5 overflow-hidden transition-colors duration-300"
     >
       <div className="container mx-auto">
         <div className="flex justify-between items-end mb-10 md:mb-16">
-          <h2 className="text-3xl font-bold uppercase">The Operators</h2>
-          <span className="hidden md:block h-[1px] flex-1 bg-white/10 mx-8 mb-2"></span>
-          <p className="text-gray-500 text-sm">T4S_MEMBERS_V1.0</p>
+          <h2 className="text-3xl font-bold uppercase text-black dark:text-white transition-colors duration-300">The Operators</h2>
+          <span className="hidden md:block h-[1px] flex-1 bg-black/10 dark:bg-white/10 mx-8 mb-2 transition-colors duration-300"></span>
+          <p className="text-gray-500 text-sm transition-colors duration-300">T4S_MEMBERS_V1.0</p>
         </div>
 
         {/* Desktop Circular Layout */}
         <div className="hidden lg:flex justify-center items-center h-[600px] relative w-full">
-          <div className="absolute w-[450px] h-[450px] border border-white/5 rounded-full" />
+          <div className="absolute w-[450px] h-[450px] border border-black/5 dark:border-white/5 rounded-full transition-colors duration-300" />
           <motion.div
             style={{ rotate: rotation }}
             className="relative w-[450px] h-[450px] rounded-full flex justify-center items-center"
@@ -120,8 +120,8 @@ const Team: React.FC = () => {
                     className="group text-center w-40 cursor-pointer"
                   >
                     <div className="relative w-36 h-36 mx-auto mb-4">
-                      <div className="absolute inset-0 border border-white/20 rounded-[30px] rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
-                      <div className="absolute inset-0 border border-white/20 rounded-[30px] -rotate-3 group-hover:-rotate-6 transition-transform duration-500"></div>
+                      <div className="absolute inset-0 border border-black/20 dark:border-white/20 rounded-[30px] rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                      <div className="absolute inset-0 border border-black/20 dark:border-white/20 rounded-[30px] -rotate-3 group-hover:-rotate-6 transition-transform duration-500"></div>
                       <div className="absolute inset-0 rounded-[30px] overflow-hidden shadow-2xl">
                         <img
                           src={member.image}
@@ -131,9 +131,9 @@ const Team: React.FC = () => {
                       </div>
                     </div>
                     <div
-                      className={`bg-black/80 backdrop-blur-sm p-2 rounded-xl border border-white/10 transition-opacity duration-300 ${isHovered ? "opacity-100" : "opacity-70 group-hover:opacity-100"}`}
+                      className={`bg-white/80 dark:bg-black/80 backdrop-blur-sm p-2 rounded-xl border border-black/10 dark:border-white/10 transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-70 group-hover:opacity-100"}`}
                     >
-                      <h3 className="text-sm font-bold uppercase group-hover:text-blue-400 transition-colors">
+                      <h3 className="text-sm font-bold uppercase group-hover:text-blue-600 dark:group-hover:text-blue-400 text-black dark:text-white transition-colors">
                         {member.name}
                       </h3>
                       <p className="text-[10px] text-gray-500 tracking-widest mt-1">
@@ -162,8 +162,8 @@ const Team: React.FC = () => {
               className="group text-center"
             >
               <div className="relative w-48 h-48 mx-auto mb-6">
-                <div className="absolute inset-0 border border-white/20 rounded-[40px] rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
-                <div className="absolute inset-0 border border-white/20 rounded-[40px] -rotate-3 group-hover:-rotate-6 transition-transform duration-500"></div>
+                <div className="absolute inset-0 border border-black/20 dark:border-white/20 rounded-[40px] rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                <div className="absolute inset-0 border border-black/20 dark:border-white/20 rounded-[40px] -rotate-3 group-hover:-rotate-6 transition-transform duration-500"></div>
                 <div className="absolute inset-0 rounded-[40px] overflow-hidden">
                   <img
                     src={member.image}
@@ -172,7 +172,7 @@ const Team: React.FC = () => {
                   />
                 </div>
               </div>
-              <h3 className="text-xl font-bold uppercase group-hover:text-blue-400 transition-colors">
+              <h3 className="text-xl font-bold uppercase group-hover:text-blue-600 dark:group-hover:text-blue-400 text-black dark:text-white transition-colors">
                 {member.name}
               </h3>
               <p className="text-sm text-gray-500 tracking-widest mt-1">
@@ -189,7 +189,7 @@ const Team: React.FC = () => {
           className="mt-16 text-center"
         >
           <p className="text-gray-500 text-sm italic tracking-wide">
-            <span className="text-white font-bold">T4S</span> Origin: The
+            <span className="text-black dark:text-white font-bold transition-colors duration-300">T4S</span> Origin: The
             convergence of
             <span className="text-red-400 font-bold"> T</span>rishit,
             <span className="text-blue-400 font-bold"> S</span>udip,
